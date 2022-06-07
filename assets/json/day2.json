@@ -36,20 +36,48 @@
 			"dialog" : "Yeah I know I know I screwed up! I Thought I checked my schedule and everything but the overworked environment really shut off my brain! I’m so sorry!"
 		},
 		{	
+			"speaker" : "angry_andi",
+			"dialog" : "What? Don’t look at me like that, the paint was on sale! It was the premium products! Anyone would buy that deal!",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "sad_andi",
+			"dialog" : "...Or is it only me?",
+			"newSpeaker" : "true"
+		},
+		{	
 			"speaker" : "happy_andi",
-			"dialog" : "Look, I’m sure you’ll manage. Just make the robots and now paint them in a color the customers would want. Before your shift activate the P.E.N.S machine and install the colors. The display will show buttons of color, which will spray your robots with paint!",
+			"dialog" : "Look, I’m sure you’ll manage. Just make the robots and now paint them in a color the customers would want.",
 			"newSpeaker":"true"
 		}
 	],
 	[
 		{
+			"speaker" : "color_tutorial",
+			"dialog" : "Before your shift you can install the paint in the P.E.N.S machine. The display to the machine should have a color pallete-like display and would look something like this.",
+			"newSpeaker" :"true"
+		},
+		{
+			"speaker" : "pen_tutorial",
+			"dialog" : "Now, these touch panels have clickable buttons that will deploy the adorable P.E.N.S and they will spray your robots with paint! ",
+			"newSpeaker" :"true"
+			
+		},
+		
+		{
 			"speaker" : "happy_andi",
-			"dialog" : "Pretty handy right? Saves you from the hassle of spraying your hands with paint. You know that feeling when you wash your hands for hours ot get the stain off? Not pleasant."
+			"dialog" : "Pretty handy right? Saves you from the hassle of spraying your hands with paint. You know that feeling when you wash your hands for hours ot get the stain off? Not pleasant.",
+			"newSpeaker": "true"
+		},
+		{
+			"speaker" : "angry_andi",
+			"dialog" : "One last thing. COLOR THE ROBOT BEFORE YOU SELL IT IN. The device is advanced and WILL check if a robot is complete, but still lacks a color checker.",
+			"newSpeaker" : "true"
 			
 		},
 		{
 			"speaker" : "laugh_andi",
-			"dialog" : "Anyways, I’ll be off! Surfing Lessons are calling me!",
+			"dialog" : "Anyways, I'm sure you will be fine. I’ll be off! Surfing Lessons are calling me!",
 			"newSpeaker" : "true"
 		}
 	]

@@ -1,6 +1,6 @@
-class Day1 extends Phaser.Scene {
+class Day4 extends Phaser.Scene {
     constructor() {
-        super("Day1Scene");
+        super("Day4Scene");
 
         // dialog constants
         this.DBOX_X = 600;			    // dialog box x-position
@@ -36,16 +36,9 @@ class Day1 extends Phaser.Scene {
 
 
 
-        this.assembly_tutorial = null;
-        this.color_tutorial = null;
-        this.door_tutorial = null;
-        this.inv_tutorial = null;
-        this.workshop_tutorial = null;
-        this.sell_tutorial = null;
-        this.storage_tutorial = null;
-        this.order_tutorial = null;
-        this.drag_tutorial = null;
-        this.tweenDuration = 150;
+      
+
+        this.tweenDuration = 100;
 
         this.OFFSCREEN_X = -800;        // x,y values to place characters offscreen
         this.OFFSCREEN_Y = 1000;
@@ -53,7 +46,7 @@ class Day1 extends Phaser.Scene {
 
     create() {
         // parse dialog from JSON file
-        this.dialog = this.cache.json.get('day1');
+        this.dialog = this.cache.json.get('day3');
        
         //console.log(this.dialog);
 
@@ -71,15 +64,8 @@ class Day1 extends Phaser.Scene {
         this.happy_andi = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+720, 'Andi_Happy').setOrigin(0, 1);
       
 
-        this.assembly_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+720, 'Assembly_Tutorial').setOrigin(0, 1).setScale(0.5);
-        this.color_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+720, 'Color_Tutorial').setOrigin(0, 1).setScale(0.5);
-        this.door_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+620, 'Door_Tutorial').setOrigin(0, 1).setScale(0.65,0.55);
-        this.workshop_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+520, 'WS_Tutorial').setOrigin(0, 1).setScale(0.45, 0.65);
-        this.inv_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+600, 'Inv_Tutorial').setOrigin(0, 1).setScale(0.85,0.60);
-        this.order_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+570, 'Order_Tutorial').setOrigin(0, 1);
-        this.storage_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+570, 'Storage_Tutorial').setOrigin(0, 1).setScale(0.5,0.7);
-        this.sell_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+570, 'Sell_Tutorial').setOrigin(0, 1).setScale(0.75,0.65);
-        this.drag_tutorial = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+570, 'Drag_Tutorial').setOrigin(0, 1).setScale(0.75,0.65);
+     
+        
         // input
         cursors = this.input.keyboard.createCursorKeys();
 
@@ -138,7 +124,7 @@ class Day1 extends Phaser.Scene {
             }
             // make text box invisible
             this.dialogbox.visible = false;
-            this.scene.start("Day2Scene");
+            this.scene.start("FinalScene");
 
         } else {
             // if not, set current speaker

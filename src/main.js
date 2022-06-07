@@ -16,7 +16,7 @@ let config = {
     width: 1280,
     height: 720,
     backgroundColor: '#87CEEB',
-    scene: [ Title, Day1, Talking, Macbeth ]
+    scene: [ Title, Day1, Day2, Day3,Day4,Final,Talking, Macbeth ]
 };
 
 const game = new Phaser.Game(config);
