@@ -1,0 +1,32 @@
+[
+	[
+		{
+			"speaker" : "homer",
+			"dialog" : "Woah Day 4 already? Time surely flies when you are on vacation huh? Or is it work for your case.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "neptune",
+			"dialog" : "You got the hang of the job right? No? Well, I am going to be a bringer of bad news and I just recalled I accidently ordered more colors on top of the new ones from 2 days ago.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "homer",
+			"dialog" : "…And also advertised the products…",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "homer",
+			"dialog" : "What? Don’t look at me like that, the paint was on sale! It was the premium products! Anyone would buy that deal. Or is it just me?"
+		},
+		{	
+			"speaker" : "homer",
+			"dialog" : "I’m getting off track, the paints should be displayed similarly on the P.E.N.S Machine. Click on the right color, they will spray it."
+		},
+		{	
+			"speaker" : "homer",
+			"dialog" : "Ok Good Luck! Sorry about the paint!"
+		}
+		
+	]
+]

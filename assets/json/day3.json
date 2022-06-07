@@ -1,0 +1,35 @@
+[
+	[
+		{
+			"speaker" : "homer",
+			"dialog" : "Hey Morning again. Sorry for all the paint deleveries yesterday, it must’ve been a little difficult to get used to at first but I’m sure you’ve got it, right?",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "neptune",
+			"dialog" : "Are customers writing tickets ok? Sometimes they right really poor orders that were hard to pin point what they would want to order and they would pay me less. Hope it won't happen to you.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "homer",
+			"dialog" : "Oh yeah . before I go. I forgot to mention something, today a sweet new category is going to be added to the production catalog! The Bladed Alagomination Sharpy! Customers would also probably want to order this as well.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "homer",
+			"dialog" : "Yeah I advertised it for next week......but previous me thought next week was “This” week...I’m sorry."
+		},
+		{	
+			"speaker" : "homer",
+			"dialog" : "Soooo…. you will now have to take new orders that have different colors. "
+		},
+		{	
+			"speaker" : "homer",
+			"dialog" : "..."
+		},
+		{	
+			"speaker" : "homer",
+			"dialog" : "Um, watch out for your fingers, the new robot parts may be a little spikey ;). I’ll be off now, good luck!"
+		}
+	]
+]

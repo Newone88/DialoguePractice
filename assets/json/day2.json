@@ -1,0 +1,56 @@
+[
+	[
+		{
+			"speaker" : "laugh_andi",
+			"dialog" : "Hey how are ya? The hotel’s breakfast was very awesome! They like have this amazing chef who makes an omlette based on your preferences! Oh man I gotta send you pics later today around your break.",
+			"newSpeaker" : "true"
+		},
+		{
+			"speaker" : "happy_andi",
+			"dialog" : "How’s the robot building going? I think everything should be pretty straight forward right? Getting tickets, making robots based on their preferences? Pretty easy!",
+			"newSpeaker" : "true"
+			
+		},
+		{
+			"speaker" : "sad_andi",
+			"dialog" : "But ... Um here’s the thing. I kinda got to apologize. You remember that I told you how this job would be simple for the week and it shouldn’t be difficult?",
+			"newSpeaker" : "true"
+			
+		},
+		{
+			"speaker" : "sad_andi",
+			"dialog" : "Well… , um… I kinda lied. I advertised new color combinations for our existing models up for production week after you were gone. But I think I messed up the date and its here a week early...Just got an email."
+		},
+		{	
+			"speaker" : "laugh_andi",
+			"dialog" : "Soooo…. you will now have to take new orders that have different colors. ",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "sad_andi",
+			"dialog" : "...",
+			"newSpeaker" : "true"
+		},
+		{	
+			"speaker" : "sad_andi",
+			"dialog" : "Yeah I know I know I screwed up! I Thought I checked my schedule and everything but the overworked environment really shut off my brain! I’m so sorry!"
+		},
+		{	
+			"speaker" : "happy_andi",
+			"dialog" : "Look, I’m sure you’ll manage. Just make the robots and now paint them in a color the customers would want. Before your shift activate the P.E.N.S machine and install the colors. The display will show buttons of color, which will spray your robots with paint!",
+			"newSpeaker":"true"
+		}
+	],
+	[
+		{
+			"speaker" : "happy_andi",
+			"dialog" : "Pretty handy right? Saves you from the hassle of spraying your hands with paint. You know that feeling when you wash your hands for hours ot get the stain off? Not pleasant."
+			
+		},
+		{
+			"speaker" : "laugh_andi",
+			"dialog" : "Anyways, I’ll be off! Surfing Lessons are calling me!",
+			"newSpeaker" : "true"
+		}
+	]
+]

@@ -1,22 +1,22 @@
-class Talking extends Phaser.Scene {
+class Day1 extends Phaser.Scene {
     constructor() {
-        super("talkingScene");
+        super("Day1Scene");
 
         // dialog constants
-        this.DBOX_X = 500;			    // dialog box x-position
-        this.DBOX_Y = 500;			    // dialog box y-position
+        this.DBOX_X = 600;			    // dialog box x-position
+        this.DBOX_Y = 50;			    // dialog box y-position
         this.DBOX_FONT = 'gem_font';	// dialog box font key
 
-        this.TEXT_X = 50;			// text w/in dialog box x-position
-        this.TEXT_Y = 445;			// text w/in dialog box y-position
+        this.TEXT_X = 770;			// text w/in dialog box x-position
+        this.TEXT_Y = 75;			// text w/in dialog box y-position
         this.TEXT_SIZE = 40;		// text font size (in pixels)
-        this.TEXT_MAX_WIDTH = 1260;	// max width of text within box
+        this.TEXT_MAX_WIDTH = 500;	// max width of text within box
 
         this.NEXT_TEXT = '[Press SPACE to Continue]';	// text to display for next prompt
-        this.NEXT_X = centerX + 300;			// next text prompt x-position
+        this.NEXT_X = centerX + 600;			// next text prompt x-position
         this.NEXT_Y = 710;			// next text prompt y-position
 
-        this.LETTER_TIMER = 10;		// # ms each letter takes to "type" onscreen
+        this.LETTER_TIMER = 1;		// # ms each letter takes to "type" onscreen
 
         // dialog variables
         this.dialogConvo = 0;			// current "conversation"
@@ -26,36 +26,39 @@ class Talking extends Phaser.Scene {
         this.dialogTyping = false;		// flag to lock player input while text is "typing"
         this.dialogText = null;			// the actual dialog text
         this.nextText = null;			// player prompt text to continue typing
-        this.dialogEmote = null;
+        
 
         // character variables
-        this.homer = null;
-        this.minerva = null;
-        this.neptune = null;
-        this.jove = null;
-        this.tweenDuration = 500;
+        this.laugh_andi = null;
+        this.sad_andi = null;
+        this.angry_andi = null;
+        this.happy_andi = null;
 
-        this.OFFSCREEN_X = -500;        // x,y values to place characters offscreen
+        this.tweenDuration = 1;
+
+        this.OFFSCREEN_X = -700;        // x,y values to place characters offscreen
         this.OFFSCREEN_Y = 1000;
     }
 
     create() {
         // parse dialog from JSON file
         this.dialog = this.cache.json.get('day2');
+       
         //console.log(this.dialog);
 
         // add dialog box sprite
-        this.dialogbox = this.add.sprite(this.DBOX_X, this.DBOX_Y, 'dialogbox').setOrigin(0).setScale(0.5);
+        this.dialogbox = this.add.sprite(this.DBOX_X, this.DBOX_Y, 'Dialog_Box').setOrigin(0);
 
         // initialize dialog text objects (with no text)
         this.dialogText = this.add.bitmapText(this.TEXT_X, this.TEXT_Y, this.DBOX_FONT, '', this.TEXT_SIZE);
         this.nextText = this.add.bitmapText(this.NEXT_X, this.NEXT_Y, this.DBOX_FONT, '', this.TEXT_SIZE);
 
         // ready the character dialog images offscreen
-        this.homer = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'homer').setOrigin(0, 1);
-        this.minerva = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'minerva').setOrigin(0, 1);
-        this.neptune = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'neptune').setOrigin(0, 1);
-        this.jove = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'jove').setOrigin(0, 1);
+        this.laugh_andi = this.add.sprite(100, this.DBOX_Y+720, 'Andi_Laugh').setOrigin(0, 1).setScale(0.5);
+        this.sad_andi = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+720, 'Andi_Sad').setOrigin(0, 1).setScale(0.5);
+        this.angry_andi = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+720, 'Andi_Angry').setOrigin(0, 1).setScale(0.5);
+        this.happy_andi = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+720, 'Andi_Happy').setOrigin(0, 1);
+      
 
         // input
         cursors = this.input.keyboard.createCursorKeys();
@@ -108,7 +111,7 @@ class Talking extends Phaser.Scene {
             if(this.dialogLastSpeaker) {
                 this.tweens.add({
                     targets: this[this.dialogLastSpeaker],
-                    x: this.OFFSCREEN_X,
+                    x: this.OFFSCREEN_X ,
                     duration: this.tweenDuration,
                     ease: 'Linear'
                 });
@@ -134,14 +137,14 @@ class Talking extends Phaser.Scene {
                 // tween in new speaker's image
                 this.tweens.add({
                     targets: this[this.dialogSpeaker],
-                    x: this.DBOX_X + 50,
+                    x: this.DBOX_X - 500,
                     duration: this.tweenDuration,
                     ease: 'Linear'
                 });
             }
 
             // build dialog (concatenate speaker + line of text)
-            this.dialogLines = this.dialog[this.dialogConvo][this.dialogLine]['speaker'].toUpperCase() + ': ' + this.dialog[this.dialogConvo][this.dialogLine]['dialog'];
+            this.dialogLines =  'ANDI : ' + this.dialog[this.dialogConvo][this.dialogLine]['dialog'];
 
             // create a timer to iterate through each letter in the dialog text
             let currentChar = 0; 

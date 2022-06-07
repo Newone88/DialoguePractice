@@ -13,9 +13,10 @@
 // game config
 let config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    scene: [ Title, Talking, Macbeth ]
+    width: 1280,
+    height: 720,
+    backgroundColor: '#87CEEB',
+    scene: [ Title, Day1, Talking, Macbeth ]
 };
 
 const game = new Phaser.Game(config);
@@ -24,3 +25,5 @@ const game = new Phaser.Game(config);
 const centerX = game.config.width / 2;
 const centerY = game.config.height / 2;
 let cursors = null;
+
+let keyA;
